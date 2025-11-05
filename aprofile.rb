@@ -43,7 +43,6 @@ class Aprofile < Formula
       Then reload your shell and use: aprofile <profile-name>
     EOS
   end
-  end
 
   test do
     system "#{bin}/aprofile", "--version"
