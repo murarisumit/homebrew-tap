@@ -1,7 +1,7 @@
 class Aprofile < Formula
   desc "Simple AWS profile switcher CLI"
   homepage "https://github.com/murarisumit/aprofile"
-  version "1.0.0"
+  version "0.0.1"
   
   on_macos do
     if Hardware::CPU.intel?
