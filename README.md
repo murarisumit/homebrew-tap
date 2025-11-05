@@ -1,19 +1,37 @@
-# Homebrew Tap for aprofile
+# Homebrew Tap
 
-This is a [Homebrew](https://brew.sh) tap for [aprofile](https://github.com/murarisumit/aprofile) - an AWS profile switcher.
+This is a [Homebrew](https://brew.sh) tap for my command-line tools.
+
+## Available Tools
+
+### aprofile
+AWS profile switcher - quickly switch between AWS profiles with shell integration.
+
+**Repository:** https://github.com/murarisumit/aprofile
+
+### kcontext
+Kubernetes kubeconfig switcher - easily switch between kubeconfig files.
+
+**Repository:** https://github.com/murarisumit/kcontext
 
 ## Installation
 
 ```bash
+# Add the tap
 brew tap murarisumit/tap
+
+# Install tools
 brew install aprofile
+brew install kcontext
 ```
 
 ## Setup
 
-After installation, add the shell integration to your shell config:
+### aprofile
 
-**Bash** (~/.bashrc or ~/.bash_profile):
+Add shell integration to your shell config:
+
+**Bash** (~/.bashrc):
 ```bash
 eval "$(aprofile --init bash)"
 ```
@@ -28,21 +46,53 @@ eval "$(aprofile --init zsh)"
 aprofile --init fish | source
 ```
 
-Then reload your shell or open a new terminal.
-
-## Usage
-
+**Usage:**
 ```bash
-# List available profiles
-aprofile --list
-
-# Switch to a profile
-aprofile myprofile
-
-# Check version
-aprofile --version
+aprofile --list              # List AWS profiles
+aprofile myprofile           # Switch to profile
 ```
 
-## More Info
+### kcontext
 
-See the main repository for more details: https://github.com/murarisumit/aprofile
+Add shell integration to your shell config:
+
+**Bash** (~/.bashrc):
+```bash
+eval "$(kcontext --init bash)"
+```
+
+**Zsh** (~/.zshrc):
+```zsh
+eval "$(kcontext --init zsh)"
+```
+
+**Fish** (~/.config/fish/config.fish):
+```fish
+kcontext --init fish | source
+```
+
+**Usage:**
+```bash
+kcontext --list                    # List kubeconfig files
+kcontext my-cluster.kubeconfig     # Switch to kubeconfig
+```
+
+## Quick Start
+
+```bash
+# One-time setup
+brew tap murarisumit/tap
+brew install aprofile kcontext
+
+# Add to your shell config (choose your shell)
+echo 'eval "$(aprofile --init bash)"' >> ~/.bashrc
+echo 'eval "$(kcontext --init bash)"' >> ~/.bashrc
+
+# Reload your shell
+source ~/.bashrc
+```
+
+## More Information
+
+- [aprofile repository](https://github.com/murarisumit/aprofile)
+- [kcontext repository](https://github.com/murarisumit/kcontext)
