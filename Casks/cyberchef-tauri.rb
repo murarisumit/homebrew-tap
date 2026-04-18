@@ -1,6 +1,6 @@
 cask "cyberchef-tauri" do
-  version "0.1.1-cyberchef.10.23.0"
-  sha256 "702697039abceb9c5d7883aa2a5e00084489d7f512dd918f6ee3afc6287682b4"
+  version "0.1.4-cyberchef.10.23.0"
+  sha256 "df36caa8a3da5d3f1398c04f8d77c5ab90982d24f9cb0c9ad027bea69bc719a1"
 
   url "https://github.com/murarisumit/cyberchef-tauri/releases/download/v#{version}/CyberChef-v#{version}-macos.dmg",
       verified: "github.com/murarisumit/cyberchef-tauri/"
