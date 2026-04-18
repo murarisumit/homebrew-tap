@@ -1,6 +1,6 @@
 # Homebrew Tap
 
-This is a [Homebrew](https://brew.sh) tap for my command-line tools.
+This is a [Homebrew](https://brew.sh) tap for my command-line tools and macOS apps.
 
 ## Available Tools
 
@@ -14,6 +14,11 @@ Kubernetes kubeconfig switcher - easily switch between kubeconfig files.
 
 **Repository:** https://github.com/murarisumit/kcontext
 
+### cyberchef-tauri
+CyberChef packaged as a native macOS desktop app.
+
+**Repository:** https://github.com/murarisumit/cyberchef-tauri
+
 ## Installation
 
 ```bash
@@ -23,6 +28,12 @@ brew tap murarisumit/tap
 # Install tools
 brew install aprofile
 brew install kcontext
+
+# Install the CyberChef desktop app
+brew install --cask murarisumit/tap/cyberchef-tauri
+
+# Upgrade the CyberChef desktop app
+brew upgrade --cask murarisumit/tap/cyberchef-tauri
 ```
 
 ## Setup
@@ -83,6 +94,7 @@ kcontext my-cluster.kubeconfig     # Switch to kubeconfig
 # One-time setup
 brew tap murarisumit/tap
 brew install aprofile kcontext
+brew install --cask murarisumit/tap/cyberchef-tauri
 
 # Add to your shell config (choose your shell)
 echo 'eval "$(aprofile --init bash)"' >> ~/.bashrc
